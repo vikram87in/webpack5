@@ -8,3 +8,6 @@ console.log('barbarian: ', getBarbarian());
 const obj = { a: 'alpha', b: 'bravo' };
 const newObj = { ...obj, c: 'cutea' };
 console.log(newObj);
+const str:string = 'typescripts string';
+console.log(str);
+

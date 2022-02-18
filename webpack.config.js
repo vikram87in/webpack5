@@ -2,15 +2,26 @@ const path = require('path');
 const mode = process.env.NODE_ENV == 'production' ? 'production' : 'development';
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, 'dist')
   },
   // mode is getting set from the package json CLI
   mode: mode,
+  resolve:
+  {
+    extensions: ['.js', '.ts']
+  },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader'
+        }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -23,8 +34,7 @@ module.exports = {
   },
   // enables the live reloading. does all the work in memory.
   devServer: {
-    static: path.join(__dirname, 'dist'),
-    compress: true
+    static: path.join(__dirname, 'dist')
   },
   devtool: 'source-map'
 }
