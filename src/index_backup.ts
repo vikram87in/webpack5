@@ -1,13 +1,12 @@
-import { wizard } from './wizard';
-import { getBarbarian } from './barbarian';
+import { wizard, getBarbarian } from './ts-barbarian';
 
-console.log('hello from index.js');
 console.log('wizard: ', wizard);
 console.log('barbarian: ', getBarbarian());
 
+console.log([1, 2, 3].includes(2)); 
 const obj = { a: 'alpha', b: 'bravo' };
 const newObj = { ...obj, c: 'cutea' };
 console.log(newObj);
-const str:string = 'typescripts string';
-console.log(str);
-
+const arr = [1, 23, 3];
+const arr1 = [...arr, 5];
+console.log(arr1);
