@@ -1,0 +1,30 @@
+:root{
+  --mainBg: mediumpurple;
+}
+
+$light-text: moccasin;
+
+body{
+  background-color: var(--mainBg);
+ color: $light-text 
+}
+
+h1{
+  font-size: 68px;
+  text-align: center;
+}
+
+.boxes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 500px;
+    border: 1px dotted blue;
+  }
+}
+

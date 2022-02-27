@@ -1,4 +1,5 @@
 import { wizard, getBarbarian } from './barbarian';
+import './css/style.scss';
 
 console.log('wizard: ', wizard);
 console.log('barbarian: ', getBarbarian());
