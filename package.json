@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "core-js": "^3.21.1",
+    "regenerator-runtime": "^0.13.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.4",
     "@babel/preset-env": "^7.16.11",

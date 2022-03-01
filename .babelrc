@@ -1,3 +1,11 @@
 {
-  "presets": ["@babel/preset-env"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage", // no need to import the packages in js file is 'usage' is used.
+        "corejs": "3.21" // used for polyfill
+      }
+    ]
+  ]
 }
